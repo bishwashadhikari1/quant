@@ -64,12 +64,11 @@ while True:
     for i in range(1,60):
         time.sleep(15)
         orders = order_list()
+        print(order_list)
         print(current_orders)
         for current in current_orders:
             try:
-                if current[0] in orders and current[1] in orders:
-                    pass
-                else:
+                if (current[0] not in orders) or (current[1] not in orders):
                     for tick in list_of_tickers:
                         try:
                             session.futures_cancel_order(tick, current[0])
