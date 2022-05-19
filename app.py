@@ -8,7 +8,7 @@ import time
 size_USDT = 10
 
 
-time.sleep(560)
+
 
 # def leverage_change(leveragex):
 #     print("CHANGING LEVERAGE...")
